@@ -162,7 +162,7 @@ Vue.component('edit-button', {
 ```
 {
 	label: '',
-	component: 'edit-button'
+	component: {name: 'edit-button', attributes: {}}
 }
 ```
 
@@ -171,7 +171,7 @@ This will inject the given component into the cell for the cooresponding row. Th
 ```
 <tr v-for="row in rows">
 	<td v-for="column in columns">
-		<component :is="column.component" :row="row"></component>
+		<component :is="column.component.name" :row="row" :column="column" v-bind="column.component.attributes"></component>
 	</td>
 </tr>
 ```
