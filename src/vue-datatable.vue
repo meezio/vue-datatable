@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import Column from './classes/column.js';
 
 export default {
