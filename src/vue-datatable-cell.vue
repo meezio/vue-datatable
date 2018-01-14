@@ -2,7 +2,7 @@
 
 <template>
 	<td :style="{'text-align': column.align}">
-		<component v-if="column.component" :is="column.component.name" :row="row" :column="column" v-bind="column.component.attributes"></component>
+		<component v-if="column.component" :is="column.component.name" :row="row" :column="column" v-bind="column.component.attributes" v-on="column.component.events"></component>
 		<span v-else-if="column.interpolate" v-html="content"></span>
 		<span v-else>{{ content }}</span>
 	</td>
